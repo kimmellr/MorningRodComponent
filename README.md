@@ -5,6 +5,7 @@ files need to be saved to {home assistant config directory}/custom_componet/morn
 
 
 :Usage in configuration.yaml
+```yaml
 cover:
   - platform: morning_rod
     covers:
@@ -14,3 +15,4 @@ cover:
       blind1:
         code: <token_string for blind1>
         name: blind_name
+```
