@@ -1,0 +1,1 @@
+"""The MorningRod component."""
