@@ -105,10 +105,12 @@ class MorningRod(CoverDevice):
     def close_cover(self):
         """Close the cover."""
         requests.get(blindClose.format(self._code))
+        self._state = STATE_CLOSED
 
     def open_cover(self):
         """Open the cover."""
         requests.get(blindOpen.format(self._code))
+        self._state = STATE_OPEN
         
     @property
     def device_class(self):
