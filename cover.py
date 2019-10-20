@@ -11,7 +11,8 @@ import homeassistant.helpers.config_validation as cv
 
 _LOGGER = logging.getLogger(__name__)
 
-DEFAULT_NAME = 'MorningRod'
+DOMAIN = "morning_rod"
+DEFAULT_NAME = 'morning_rod'
 
 CONF_DEVICE_ID = 'device_id'
 
@@ -45,13 +46,13 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
 
     for device_id, device_config in devices.items():
         args = {
-            CONF_ID: device_config.get(CONF_ID),
+#             CONF_ID: device_config.get(CONF_ID),
             CONF_CODE: device_config.get(CONF_CODE),
             CONF_NAME: device_config.get(CONF_NAME),
-            CONF_DEVICE_ID: device_config.get(CONF_DEVICE, device_id),
+#             CONF_DEVICE_ID: device_config.get(CONF_DEVICE, device_id),
         }
 
-        covers.append(neocontroller(hass, args))
+        covers.append(MorningRod(hass, args))
 
     add_devices(covers, True)
 
@@ -64,8 +65,8 @@ class MorningRod(CoverDevice):
         """Initialize the cover."""
         self.hass = hass
         self._name = args[CONF_NAME]
-        self.device_id = args['device_id']
-        self._id      = args[CONF_ID]
+#         self.device_id = args['device_id']
+#         self._id      = args[CONF_ID]
         self._code    = args[CONF_CODE]
         self._available = False
         self._state = None
