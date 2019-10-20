@@ -92,7 +92,7 @@ class MorningRod(CoverDevice):
 
     def update(self):
         """Poll the current state of the device."""
-        response = requests.get(blindConnectd.format(_code))
+        response = requests.get(blindConnectd.format(self._code))
         if response.status_code == 200:
             if 'true' in response.text:
                 self._available = True
@@ -108,7 +108,7 @@ class MorningRod(CoverDevice):
 
     def open_cover(self):
         """Open the cover."""
-        requests.get(blindOpen.format(_code))
+        requests.get(blindOpen.format(self._code))
         
     @property
     def device_class(self):
