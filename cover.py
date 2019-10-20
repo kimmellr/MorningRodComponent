@@ -22,9 +22,9 @@ STATE_OPENING = 'opening'
 STATE_STOPPED = 'stopped'
 
 COVER_SCHEMA = vol.Schema({
-    vol.Required(CONF_IP_ADDRESS): cv.string,
+#     vol.Required(CONF_IP_ADDRESS): cv.string,
     vol.Optional(CONF_NAME, default=DEFAULT_NAME): cv.string,
-    vol.Required(CONF_ID): cv.string,
+#     vol.Required(CONF_ID): cv.string,
     vol.Required(CONF_CODE): cv.string
 })
 
