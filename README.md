@@ -1,7 +1,7 @@
 # MorningRodComponet
 Custom Component for MorningRod
 
-files need to be saved to {home assistant config directory}/custom_componet/morning_rod
+files need to be saved to {home assistant config directory}/custom_component/morning_rod
 
 
 :Usage in configuration.yaml
