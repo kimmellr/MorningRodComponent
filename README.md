@@ -1,5 +1,5 @@
 # MorningRodComponet
-Custom Componet for MorningRod
+Custom Component for MorningRod
 
 files need to be saved to {home assistant config directory}/custom_componet/morning_rod
 
